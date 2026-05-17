@@ -4,6 +4,7 @@ const header = document.querySelector(".site-header");
 const toggle = document.querySelector(".menu-toggle");
 const navLinks = document.querySelectorAll(".site-nav a");
 const revealItems = document.querySelectorAll(".reveal");
+const sections = document.querySelectorAll("main section[id]");
 
 if (toggle && header) {
   toggle.addEventListener("click", () => {
@@ -20,6 +21,49 @@ navLinks.forEach((link) => {
     }
   });
 });
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape" && header?.classList.contains("is-open")) {
+    header.classList.remove("is-open");
+    toggle?.setAttribute("aria-expanded", "false");
+  }
+});
+
+const syncHeaderState = () => {
+  if (!header) {
+    return;
+  }
+
+  header.classList.toggle("is-scrolled", window.scrollY > 18);
+};
+
+syncHeaderState();
+window.addEventListener("scroll", syncHeaderState, { passive: true });
+
+if ("IntersectionObserver" in window) {
+  const sectionObserver = new IntersectionObserver(
+    (entries) => {
+      entries.forEach((entry) => {
+        if (!entry.isIntersecting) {
+          return;
+        }
+
+        const targetId = entry.target.getAttribute("id");
+
+        navLinks.forEach((link) => {
+          const isActive = link.getAttribute("href") === `#${targetId}`;
+          link.setAttribute("aria-current", String(isActive));
+        });
+      });
+    },
+    {
+      threshold: 0.45,
+      rootMargin: "-15% 0px -45% 0px",
+    }
+  );
+
+  sections.forEach((section) => sectionObserver.observe(section));
+}
 
 if ("IntersectionObserver" in window) {
   const revealObserver = new IntersectionObserver(

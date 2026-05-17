@@ -1,235 +1,400 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Aditya Narayan Mishra | Senior SDET Portfolio</title>
-    <meta
-      name="description"
-      content="Portfolio site for Aditya Narayan Mishra, a Senior SDET focused on automation architecture, API validation, and AI-enabled quality engineering."
-    />
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="styles.css" />
-  </head>
-  <body>
-    <div class="page-shell">
-      <header class="site-header">
-        <a class="brand" href="#top">
-          <span class="brand-mark">ANM</span>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Aditya Narayan Mishra | Senior QA Engineer Portfolio</title>
+  <meta name="description"
+    content="Portfolio site for Aditya Narayan Mishra, a Senior QA Engineer building automation platforms, backend validation systems, and scalable quality architecture." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@500;600;700&display=swap"
+    rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+  <div class="page-shell">
+    <header class="site-header">
+      <a class="brand" href="#home" aria-label="Aditya Narayan Mishra home">
+        <span class="brand-mark">ANM</span>
+        <span class="brand-block">
           <span class="brand-text">Aditya Narayan Mishra</span>
-        </a>
-        <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation">
-          <span></span>
-          <span></span>
-        </button>
-        <nav class="site-nav">
-          <a href="#about">About</a>
-          <a href="#work">Work</a>
-          <a href="#services">Skills</a>
-          <a href="#contact">Contact</a>
-        </nav>
-      </header>
+          <span class="brand-role">Senior QA Engineer</span>
+        </span>
+      </a>
+      <button class="menu-toggle" type="button" aria-expanded="false" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" aria-label="Primary">
+        <a href="#home">Home</a>
+        <a href="#about">About</a>
+        <a href="#projects">Projects</a>
+        <a href="#experience">Experience</a>
+        <a href="#tech-stack">Tech Stack</a>
+        <a href="#github-activity">GitHub Activity</a>
+        <a href="#contact">Contact</a>
+      </nav>
+    </header>
 
-      <main id="top">
-        <section class="hero section">
-          <div class="hero-copy reveal">
-            <p class="eyebrow">Senior SDET · Automation Architect · Quality Engineer</p>
-            <h1>Building faster, more reliable release pipelines through scalable test engineering.</h1>
-            <p class="hero-text">
-              I’m Aditya Narayan Mishra, a Senior Software QA Engineer with 7+ years of experience
-              across UI, API, backend, and CI-driven validation. I focus on engineering-led quality,
-              modern automation, and practical systems thinking.
-            </p>
-            <div class="hero-actions">
-              <a class="button button-primary" href="#work">Explore Projects</a>
-              <a class="button button-secondary" href="#contact">Get In Touch</a>
+    <main id="home">
+      <section class="hero section section-first">
+        <div class="hero-copy reveal">
+          <p class="eyebrow">Senior QA Engineer · SDET Track · Backend and Automation Architecture</p>
+          <h1>Engineering release systems that scale across automation, APIs, and backend workflows.</h1>
+          <p class="hero-text">
+            I build automation platforms, validation pipelines, and diagnostic tooling that improve
+            reliability at scale. My work spans Java, Spring Boot, Playwright, Selenium, REST
+            services, data checks, and the reporting layers teams depend on during large releases.
+          </p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#projects">Explore Projects</a>
+            <a class="button button-secondary" href="Aditya_Narayan_Mishra_SQA_resume.pdf" download>Download Resume</a>
+            <a class="button button-secondary" href="https://github.com/adityanmishrax86" target="_blank"
+              rel="noopener noreferrer">View GitHub</a>
+          </div>
+          <div class="hero-signals">
+            <div>
+              <span class="signal-label">Focus</span>
+              <strong>Automation infrastructure</strong>
+            </div>
+            <div>
+              <span class="signal-label">Direction</span>
+              <strong>SDET to backend systems</strong>
+            </div>
+            <div>
+              <span class="signal-label">Strength</span>
+              <strong>Release confidence at scale</strong>
             </div>
           </div>
-          <div class="hero-panel reveal">
-            <div class="hero-card hero-card-top">
-              <p>Currently</p>
-              <strong>Senior QA Engineer at e2open</strong>
-            </div>
-            <div class="hero-portrait">
-              <div class="portrait-ring"></div>
-              <div class="portrait-core">
-                <span>Experience</span>
-                <strong>7+ years</strong>
-                <small>in automation, validation, and release confidence</small>
-              </div>
-            </div>
-            <div class="hero-card hero-card-bottom">
-              <p>Based in</p>
-              <strong>Hyderabad, Telangana, India</strong>
-            </div>
-            <div class="hero-card hero-card-bottom">
-              <p>Originally from</p>
-              <strong>Puri, Odisha, India</strong>
+        </div>
+
+        <div class="hero-panel reveal">
+          <div class="hero-card hero-card-top">
+            <span class="card-label">Current Role</span>
+            <strong>Senior QA Engineer at e2open</strong>
+            <p>Building enterprise automation strategy across UI, API, reporting, and CI execution.</p>
+          </div>
+
+          <div class="hero-portrait">
+            <div class="portrait-ring"></div>
+            <div class="portrait-core">
+              <span>Experience</span>
+              <strong>7+ years</strong>
+              <small>shipping scalable automation and backend-aware validation systems</small>
             </div>
           </div>
-        </section>
 
-        <section id="about" class="section about">
-          <div class="section-heading reveal">
-            <p class="eyebrow">About</p>
-            <h2>A quality engineer who treats automation as a product, not a checklist.</h2>
+          <div class="hero-card hero-card-bottom">
+            <span class="card-label">Location</span>
+            <strong>Hyderabad, India</strong>
+            <p>Open to senior SDET, backend automation, and quality architecture opportunities.</p>
           </div>
-          <div class="about-grid">
-            <article class="about-story reveal">
-              <p>
-                I design and scale automated test solutions for web applications using Java and
-                TypeScript, with strong experience across Selenium, Playwright, REST validation, and
-                database checks. My work centers on building frameworks teams can trust in real
-                delivery environments.
-              </p>
-              <p>
-                At e2open, I led a Selenium-to-Playwright migration, improved execution speed and
-                stability, and helped shape CI-integrated test strategies across multiple
-                applications. I enjoy solving the hard edge between quality, velocity, and system
-                complexity.
-              </p>
-            </article>
-            <div class="stat-grid reveal">
-              <div class="stat-card">
-                <strong>6+</strong>
-                <span>years in software QA and automation engineering</span>
-              </div>
-              <div class="stat-card">
-                <strong>30-50%</strong>
-                <span>faster execution after Selenium to Playwright migration</span>
-              </div>
-              <div class="stat-card">
-                <strong>UI + API</strong>
-                <span>end-to-end coverage across frontend, backend, and database layers</span>
-              </div>
-              <div class="stat-card">
-                <strong>CI/CD</strong>
-                <span>automation embedded into Jenkins and release workflows</span>
-              </div>
-            </div>
-          </div>
-        </section>
+        </div>
+      </section>
 
-        <section id="work" class="section work">
-          <div class="section-heading reveal">
-            <p class="eyebrow">Selected Work</p>
-            <h2>Impact across automation frameworks, backend validation, and AI-assisted tooling.</h2>
-          </div>
-          <div class="project-stack">
-            <article class="project-card reveal">
-              <div class="project-label">01</div>
-              <div>
-                <p class="project-type">Framework Modernization</p>
-                <h3>Selenium to Playwright Migration</h3>
-                <p>
-                  Led the UI automation migration from Selenium with Java to Playwright with
-                  TypeScript, cutting execution time by roughly 30 to 50 percent while improving
-                  suite stability and release confidence.
-                </p>
-              </div>
-            </article>
-            <article class="project-card reveal">
-              <div class="project-label">02</div>
-              <div>
-                <p class="project-type">Internal Hackathon Project</p>
-                <h3>API Comparison and Bug Tracking Solution</h3>
-                <p>
-                  Built a Rest-Assured based solution to compare DEV and PROD API behavior and flag
-                  differences quickly. The project earned second place for innovation and technical
-                  execution.
-                </p>
-              </div>
-            </article>
-            <article class="project-card reveal">
-              <div class="project-label">03</div>
-              <div>
-                <p class="project-type">AI + Quality Engineering</p>
-                <h3>RAG-Powered Support Chatbot</h3>
-                <p>
-                  Collaborated on an internal AI chatbot that ingested help documentation through
-                  retrieval-augmented generation to provide contextual support for application
-                  features and user workflows.
-                </p>
-              </div>
-            </article>
-            <article class="project-card reveal">
-              <div class="project-label">04</div>
-              <div>
-                <p class="project-type">Backend Automation</p>
-                <h3>Karate API Workflow Coverage</h3>
-                <p>
-                  Implemented API automation for critical backend flows using Karate, reducing
-                  reliance on UI-heavy coverage and improving speed, reliability, and diagnostic
-                  clarity in regression cycles.
-                </p>
-              </div>
-            </article>
-            <article class="project-card reveal">
-              <div class="project-label">05</div>
-              <div>
-                <p class="project-type">AI-Driven Test Automation</p>
-                <h3>Copilot &amp; Claude Agent for Playwright Test Generation</h3>
-                <p>
-                  Built custom Copilot and Claude agents, skills, and MCP tools to automate the
-                  creation and maintenance of Playwright test cases. Leveraged AI-driven workflows
-                  to generate reliable end-to-end tests, reducing manual effort and accelerating
-                  test coverage across critical user journeys.
-                </p>
-              </div>
-            </article>
-          </div>
-        </section>
+      <section id="about" class="section about">
+        <div class="section-heading reveal">
+          <p class="eyebrow">About</p>
+          <h2>Automation designed with platform thinking, not script-by-script maintenance.</h2>
+          <p class="section-intro">
+            My background is rooted in quality engineering, but the systems I enjoy building sit
+            closer to architecture: execution grids, reporting pipelines, API validation layers,
+            and the internal tooling that makes releases predictable.
+          </p>
+        </div>
 
-        <section id="services" class="section services">
-          <div class="section-heading reveal">
-            <p class="eyebrow">Core Skills</p>
-            <h2>Hands-on across test architecture, validation strategy, and modern delivery tooling.</h2>
-          </div>
-          <div class="service-grid">
-            <article class="service-card reveal">
-              <h3>Automation Engineering</h3>
-              <p>Selenium WebDriver, Playwright, Cucumber, TestNG, JUnit 5, and reusable framework design.</p>
-            </article>
-            <article class="service-card reveal">
-              <h3>API and Data Validation</h3>
-              <p>REST API testing, Karate automation, MSSQL and Oracle checks, and robust test data validation.</p>
-            </article>
-            <article class="service-card reveal">
-              <h3>CI/CD and Cloud Exposure</h3>
-              <p>Jenkins, Bamboo, Docker, Kubernetes, Helm, AWS, GCP, Terraform, and Vault exposure.</p>
-            </article>
-          </div>
-        </section>
-
-        <section class="section quote reveal">
-          <blockquote>
-            “Quality is not just test coverage. It is confidence engineered into every release.”
-          </blockquote>
-        </section>
-
-        <section id="contact" class="section contact">
-          <div class="contact-panel reveal">
-            <p class="eyebrow">Contact</p>
-            <h2>Let’s build reliable systems and stronger release confidence.</h2>
+        <div class="about-grid">
+          <article class="about-story reveal">
             <p>
-              Open to senior QA, SDET, and quality engineering opportunities involving automation
-              architecture, CI-integrated testing, API validation, and AI-assisted workflows.
+              I work across browser automation, service validation, data verification, and CI-driven
+              orchestration. The goal is not more tests. The goal is better operational signal,
+              clearer diagnostics, and frameworks that remain maintainable under continuous change.
             </p>
-            <div class="contact-links">
-              <a class="button button-primary" href="mailto:mishraaditya384@gmail.com">mishraaditya384@gmail.com</a>
-              <a class="button button-secondary" href="https://github.com/azax-25547">GitHub</a>
-              <a class="button button-secondary" href="https://www.linkedin.com/in/azax-25547/">LinkedIn</a>
+            <p>
+              At e2open, I have led Selenium-to-Playwright modernization, improved flaky suite
+              behavior, expanded backend-oriented coverage, and contributed to AI-assisted
+              automation workflows that reduce manual effort without lowering engineering quality.
+            </p>
+          </article>
+
+          <div class="stat-grid reveal">
+            <article class="stat-card">
+              <strong>30-50%</strong>
+              <span>execution improvement delivered through Selenium to Playwright migration</span>
+            </article>
+            <article class="stat-card">
+              <strong>UI + API + DB</strong>
+              <span>coverage strategy spanning interface, service, and persistence layers</span>
+            </article>
+            <article class="stat-card">
+              <strong>CI-integrated</strong>
+              <span>automation embedded into release workflows and reporting feedback loops</span>
+            </article>
+            <article class="stat-card">
+              <strong>Systems mindset</strong>
+              <span>focused on diagnostics, orchestration, and confidence at scale</span>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="projects" class="section projects">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Projects</p>
+          <h2>Flagship platform concepts that position automation as engineering infrastructure.</h2>
+          <p class="section-intro">
+            These projects are framed as systems: execution coordination, analytics pipelines,
+            AI-assisted maintenance, and reporting layers built for team-scale use rather than
+            one-off test authoring.
+          </p>
+        </div>
+
+        <div class="projects-grid">
+          <article class="project-card project-card-featured reveal">
+            <div class="project-top">
+              <span class="project-tag">Flagship Platform</span>
+              <span class="project-status">Work In Progress</span>
+            </div>
+            <h3>Automation Intelligence Dashboard</h3>
+            <p>
+              Historical automation analytics platform for release-wise trends, flaky test scoring,
+              screenshot comparison, and reporting insights that help teams identify regression risk
+              before it escalates.
+            </p>
+            <ul class="project-notes">
+              <li>Builds release-level trend visibility instead of raw run logs</li>
+              <li>Highlights unstable suites, rerun patterns, and screenshot drift</li>
+              <li>Designed for enterprise reporting and leadership-ready diagnostics</li>
+            </ul>
+            <div class="project-tech">
+              <span>Spring Boot</span>
+              <span>MSSQL</span>
+              <span>Reporting APIs</span>
+              <span>Screenshot Diffing</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/adityanmishrax86" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <span class="ghost-action" aria-label="Dashboard demo in progress">Demo · WIP</span>
+              <span class="ghost-action" aria-label="Architecture note in progress">Architecture · WIP</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-top">
+              <span class="project-tag">Distributed Execution</span>
+              <span class="project-status">Work In Progress</span>
+            </div>
+            <h3>Distributed Selenium Execution Grid</h3>
+            <p>
+              A distributed execution platform focused on worker orchestration, parallel scheduling,
+              retry handling, and queue-aware scaling for large regression workloads.
+            </p>
+            <ul class="project-notes">
+              <li>Coordinates execution across remote workers and shared infrastructure</li>
+              <li>Improves throughput with controlled retries and workload isolation</li>
+              <li>Optimized for reliability over raw parallelism alone</li>
+            </ul>
+            <div class="project-tech">
+              <span>Java</span>
+              <span>Spring Boot</span>
+              <span>Selenium Grid</span>
+              <span>Docker</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/adityanmishrax86" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <span class="ghost-action" aria-label="Execution demo in progress">Demo · WIP</span>
+              <span class="ghost-action" aria-label="Design note in progress">System Design · WIP</span>
+            </div>
+          </article>
+
+          <article class="project-card reveal">
+            <div class="project-top">
+              <span class="project-tag">AI-Assisted Automation</span>
+              <span class="project-status">Concept Active</span>
+            </div>
+            <h3>AI-Driven Test Automation Assistant</h3>
+            <p>
+              AI-assisted framework for feature file generation, test analysis support, and
+              maintainability guidance that reduces repetitive authoring while preserving reviewable
+              engineering workflows.
+            </p>
+            <ul class="project-notes">
+              <li>Assists with feature modeling, analysis, and test maintenance paths</li>
+              <li>Supports faster authoring without hiding implementation detail</li>
+              <li>Built around reviewability and long-term framework health</li>
+            </ul>
+            <div class="project-tech">
+              <span>Java</span>
+              <span>Playwright</span>
+              <span>LLM Workflows</span>
+              <span>Spring Boot</span>
+            </div>
+            <div class="project-links">
+              <a href="https://github.com/adityanmishrax86" target="_blank" rel="noopener noreferrer">GitHub</a>
+              <span class="ghost-action" aria-label="Assistant demo in progress">Demo · WIP</span>
+              <span class="ghost-action" aria-label="Iteration note in progress">Roadmap · WIP</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="experience" class="section experience">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Experience</p>
+          <h2>Delivery outcomes across modernization, backend validation, and AI-assisted tooling.</h2>
+        </div>
+
+        <div class="experience-grid">
+          <article class="experience-card reveal">
+            <span class="experience-index">01</span>
+            <div>
+              <p class="experience-type">Framework Modernization</p>
+              <h3>Selenium to Playwright Migration</h3>
+              <p>
+                Reworked UI automation strategy from Selenium with Java to Playwright-based
+                execution, improving run time, reducing flaky behavior, and increasing release
+                confidence across repeated enterprise regression cycles.
+              </p>
+            </div>
+          </article>
+
+          <article class="experience-card reveal">
+            <span class="experience-index">02</span>
+            <div>
+              <p class="experience-type">Backend Validation</p>
+              <h3>API Comparison and Bug Tracking Solution</h3>
+              <p>
+                Built a Rest-Assured workflow to compare DEV and PROD service behavior, surface
+                drift quickly, and give teams faster visibility into environment-level defects.
+              </p>
+            </div>
+          </article>
+
+          <article class="experience-card reveal">
+            <span class="experience-index">03</span>
+            <div>
+              <p class="experience-type">AI + Internal Tooling</p>
+              <h3>RAG-Powered Support and Test Assistance</h3>
+              <p>
+                Contributed to AI-driven internal tooling that improves support context, test
+                generation workflows, and engineering productivity without disconnecting from system
+                behavior and documentation quality.
+              </p>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="tech-stack" class="section stack-section">
+        <div class="section-heading reveal">
+          <p class="eyebrow">Tech Stack</p>
+          <h2>Core technologies grouped around engineering execution, not resume keyword lists.</h2>
+        </div>
+
+        <div class="stack-groups">
+          <article class="stack-card reveal">
+            <p class="stack-title">Backend and Services</p>
+            <div class="stack-grid">
+              <span>Java</span>
+              <span>Spring Boot</span>
+              <span>REST APIs</span>
+              <span>MSSQL</span>
+            </div>
+          </article>
+
+          <article class="stack-card reveal">
+            <p class="stack-title">Automation and Quality</p>
+            <div class="stack-grid">
+              <span>Selenium</span>
+              <span>Playwright</span>
+              <span>TestNG</span>
+              <span>Reporting Platforms</span>
+            </div>
+          </article>
+
+          <article class="stack-card reveal">
+            <p class="stack-title">Infrastructure and Delivery</p>
+            <div class="stack-grid">
+              <span>Docker</span>
+              <span>Linux</span>
+              <span>CI/CD</span>
+              <span>Automation Infrastructure</span>
+            </div>
+          </article>
+        </div>
+      </section>
+
+      <section id="github-activity" class="section github-section">
+        <div class="section-heading reveal">
+          <p class="eyebrow">GitHub Activity</p>
+          <h2>Visible proof of active engineering work and continuous experimentation.</h2>
+          <p class="section-intro">
+            A public contribution surface helps recruiters validate consistency. It also supports the
+            narrative that the transition toward backend and automation architecture is active, not
+            aspirational.
+          </p>
+        </div>
+
+        <div class="github-panel reveal">
+          <div class="github-copy">
+            <p class="github-kicker">Proof of Work</p>
+            <h3>Contribution history adds credibility to platform-minded engineering claims.</h3>
+            <p>
+              The portfolio is intentionally static, but the GitHub activity block adds a live signal
+              that the work continues beyond this page through code, experiments, and engineering
+              iteration.
+            </p>
+            <div class="github-actions">
+              <a class="button button-primary" href="https://github.com/adityanmishrax86" target="_blank"
+                rel="noopener noreferrer">Open GitHub Profile</a>
+              <a class="button button-secondary" href="https://github.com/adityanmishrax86?tab=repositories"
+                target="_blank" rel="noopener noreferrer">View Repositories</a>
             </div>
           </div>
-        </section>
-      </main>
-    </div>
 
-    <script src="script.js"></script>
-  </body>
+          <div class="github-chart">
+            <img src="https://ghchart.rshah.org/7a8fb3/adityanmishrax86" alt="GitHub contribution chart for Aditya Narayan Mishra" />
+          </div>
+        </div>
+      </section>
+
+      <section id="contact" class="section contact">
+        <div class="contact-panel reveal">
+          <p class="eyebrow">Contact</p>
+          <h2>Available for senior SDET, backend automation, and quality architecture conversations.</h2>
+          <p>
+            If your team needs someone who can think in terms of execution systems, service
+            validation, automation reliability, and operational diagnostics, I would be glad to talk.
+          </p>
+          <div class="contact-links">
+            <a class="button button-primary" href="mailto:mishraaditya384@gmail.com" target="_blank"
+              rel="noopener noreferrer">mishraaditya384@gmail.com</a>
+            <a class="button button-secondary" href="Aditya_Narayan_Mishra_SQA_resume.pdf" download>Download Resume</a>
+            <a class="button button-secondary" href="https://github.com/adityanmishrax86" target="_blank"
+              rel="noopener noreferrer">GitHub</a>
+            <a class="button button-secondary" href="https://www.linkedin.com/in/azax-25547/" target="_blank"
+              rel="noopener noreferrer">LinkedIn</a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <p>Aditya Narayan Mishra · Senior QA Engineer building toward SDET, backend, and automation architecture roles.</p>
+      <div class="footer-links">
+        <a href="Aditya_Narayan_Mishra_SQA_resume.pdf" download>Resume</a>
+        <a href="https://github.com/adityanmishrax86" target="_blank" rel="noopener noreferrer">GitHub</a>
+        <a href="https://www.linkedin.com/in/azax-25547/" target="_blank" rel="noopener noreferrer">LinkedIn</a>
+        <a href="mailto:mishraaditya384@gmail.com" target="_blank" rel="noopener noreferrer">Email</a>
+      </div>
+    </footer>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
 </html>
