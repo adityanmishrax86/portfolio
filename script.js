@@ -5,6 +5,10 @@ const toggle = document.querySelector(".menu-toggle");
 const navLinks = document.querySelectorAll(".site-nav a");
 const revealItems = document.querySelectorAll(".reveal");
 const sections = document.querySelectorAll("main section[id]");
+const analyticsNodes = {
+  totalVisits: document.querySelector("[data-analytics-total-visits]"),
+  recentWindow: document.querySelector("[data-analytics-last-seven-days]"),
+};
 
 if (toggle && header) {
   toggle.addEventListener("click", () => {
@@ -84,4 +88,75 @@ if ("IntersectionObserver" in window) {
   revealItems.forEach((item) => revealObserver.observe(item));
 } else {
   revealItems.forEach((item) => item.classList.add("is-visible"));
+}
+
+const updateAnalyticsValue = (node, value) => {
+  if (!node) {
+    return;
+  }
+
+  node.textContent = value;
+};
+
+const renderAnalyticsSummary = (summary) => {
+  if (!summary) {
+    return;
+  }
+
+  updateAnalyticsValue(analyticsNodes.totalVisits, String(summary.totalVisits ?? 0));
+  updateAnalyticsValue(analyticsNodes.recentWindow, `${summary.last7Days ?? 0} visits in the last 7 days`);
+};
+
+const analyticsPayload = () => ({
+  page: window.location.pathname,
+  referrer: document.referrer,
+  language: navigator.language,
+  timezone: Intl.DateTimeFormat().resolvedOptions().timeZone,
+  viewport: {
+    width: window.innerWidth,
+    height: window.innerHeight,
+  },
+  screen: {
+    width: window.screen?.width || 0,
+    height: window.screen?.height || 0,
+  },
+});
+
+const fetchAnalyticsSummary = async () => {
+  const response = await fetch("/api/analytics/summary", {
+    headers: {
+      Accept: "application/json",
+    },
+  });
+
+  if (!response.ok) {
+    throw new Error("Unable to load analytics summary.");
+  }
+
+  return response.json();
+};
+
+const logVisit = async () => {
+  try {
+    if (sessionStorage.getItem("portfolio-visit-logged") !== "1") {
+      await fetch("/api/analytics/visit", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Accept: "application/json",
+        },
+        body: JSON.stringify(analyticsPayload()),
+        keepalive: true,
+      });
+
+      sessionStorage.setItem("portfolio-visit-logged", "1");
+    }
+
+    const summary = await fetchAnalyticsSummary();
+    renderAnalyticsSummary(summary);
+  } catch {}
+};
+
+if (window.fetch && (analyticsNodes.totalVisits || analyticsNodes.recentWindow)) {
+  logVisit();
 }
